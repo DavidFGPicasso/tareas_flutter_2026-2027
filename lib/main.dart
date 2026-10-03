@@ -11,10 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // Color para el appBar.
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(),
+      // rutas para acceder a las actividades.
       routes: {
         '/actividad1': (_) => const Actividad1(),
         '/actividad2': (_) => const Actividad2(),
@@ -26,31 +29,26 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Actividades Flutter')),
+      appBar: AppBar(
+        title: const Text('Actividades Flutter'),
+        // colores.
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        foregroundColor: Theme.of(context).colorScheme.onPrimary,
+      ),
+      // Mostramos el drawer.
       drawer: const CustomDrawer(),
       body: Center(
-        child: Text(
-          '$_counter',
-          style: Theme.of(context).textTheme.headlineMedium,
+        child: Icon(
+          Icons.flutter_dash,
+          size: 100,
+          color: Theme.of(context).colorScheme.primary,
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => setState(() => _counter++),
-        tooltip: 'Incrementar',
-        child: const Icon(Icons.add),
       ),
     );
   }

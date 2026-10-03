@@ -1,3 +1,4 @@
+// archivo con los exports de las pantallas.
 export 'screens/actividad1.dart';
 export 'screens/actividad2.dart';
 export 'screens/actividad3.dart';

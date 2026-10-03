@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-
+// Drawer de la aplicacion.
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //color del menu.
     final Color menuColor = Theme.of(context).colorScheme.primary;
 
     return Drawer(
@@ -40,6 +41,7 @@ class CustomDrawer extends StatelessWidget {
     String route,
     IconData icon,
   ) {
+    // Listtile para cada item.
     return ListTile(
       leading: Icon(icon),
       title: Text(title),
