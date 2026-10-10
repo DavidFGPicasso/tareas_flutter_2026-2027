@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 // Drawer de la aplicacion.
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -24,11 +25,14 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
-            _drawerItem(context, 'Actividad 1', '/actividad1', Icons.looks_one),
-            _drawerItem(context, 'Actividad 2', '/actividad2', Icons.looks_two),
-            _drawerItem(context, 'Actividad 3', '/actividad3', Icons.looks_3),
-            _drawerItem(context, 'Actividad 4', '/actividad4', Icons.looks_4),
-            _drawerItem(context, 'Actividad 5', '/actividad5', Icons.looks_5),
+            _drawerItem(context, 'Actividad 1', '/actividad1', Icons.filter_1),
+            _drawerItem(context, 'Actividad 2', '/actividad2', Icons.filter_2),
+            _drawerItem(context, 'Actividad 3', '/actividad3', Icons.filter_3),
+            _drawerItem(context, 'Actividad 4', '/actividad4', Icons.filter_4),
+            _drawerItem(context, 'Actividad 5', '/actividad5', Icons.filter_5),
+            _drawerItem(context, 'Actividad 6', '/actividad6', Icons.filter_6),
+            _drawerItem(context, 'Actividad 7', '/actividad7', Icons.filter_7),
+            _drawerItem(context, 'Actividad 8', '/actividad8', Icons.filter_8),
           ],
         ),
       ),

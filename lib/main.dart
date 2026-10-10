@@ -24,6 +24,9 @@ class MyApp extends StatelessWidget {
         '/actividad3': (_) => const Actividad3(),
         '/actividad4': (_) => const Actividad4(),
         '/actividad5': (_) => const Actividad5(),
+        '/actividad6': (_) => const Actividad6(),
+        '/actividad7': (_) => const Actividad7(),
+        '/actividad8': (_) => const Actividad8(),
       },
     );
   }
