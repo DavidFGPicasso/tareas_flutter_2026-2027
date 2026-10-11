@@ -33,6 +33,7 @@ class CustomDrawer extends StatelessWidget {
             _drawerItem(context, 'Actividad 6', '/actividad6', Icons.filter_6),
             _drawerItem(context, 'Actividad 7', '/actividad7', Icons.filter_7),
             _drawerItem(context, 'Actividad 8', '/actividad8', Icons.filter_8),
+            _drawerItem(context, 'Actividad 9', '/actividad9', Icons.filter_9),
           ],
         ),
       ),

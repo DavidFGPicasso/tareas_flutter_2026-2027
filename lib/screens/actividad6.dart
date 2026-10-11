@@ -45,7 +45,7 @@ class Actividad6 extends StatelessWidget {
             _textRow(
               color: Colors.green.shade100,
               child: const Text(
-                'Tercera fila: una fuente monoespaciada muestra otro texto muy largo '
+                'Tercera fila: Una fuente monospace que muestra otro texto muy largo provocando '
                 'que tampoco cabe en su contenedor.',
                 maxLines: 2,
                 overflow: TextOverflow.clip,
@@ -57,7 +57,7 @@ class Actividad6 extends StatelessWidget {
       ),
     );
   }
-
+  // Widget para las filas de diferentes textos.
   Widget _textRow({required Color color, required Widget child}) {
     return Container(
       width: double.infinity,

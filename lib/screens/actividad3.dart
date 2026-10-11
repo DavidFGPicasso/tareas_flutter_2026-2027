@@ -17,6 +17,7 @@ class Actividad3 extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(top: 24),
         child: Column(
+          // children con las imagenes.
           children: [
             Image.asset('assets/images/specialweek.webp', height: 100),
             Image.asset('assets/images/tokaiteio.webp', height: 100),

@@ -11,54 +11,63 @@ class Actividad7 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tamano = MediaQuery.of(context).size;
+    final imagenWidth = tamano.width * 0.8;
+    final imagenHeight = tamano.height * 0.22;
+    final separacionVertical = tamano.height * 0.03;
+
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       appBar: AppBar(
-        title: const Text('Imágenes Dispuestas'),
+        title: const Text('Imagenes Dispuestas'),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Theme.of(context).colorScheme.onPrimary,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _imageTile(
-              image: const AssetImage('assets/images/perro.webp'),
-              label: 'Imagen local',
-            ),
-            _imageTile(
-              image: const NetworkImage(internetImageUrl),
-              label: 'Imagen de Internet',
-            ),
-            _imageTile(
-              image: const AssetImage('assets/images/perro.webp'),
-              label: 'Imagen repetida',
-            ),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: separacionVertical),
+              _image(
+                const AssetImage('assets/images/perro.webp'),
+                'Imagen local',
+                imagenWidth,
+                imagenHeight,
+              ),
+              SizedBox(height: separacionVertical),
+              _image(
+                const NetworkImage(internetImageUrl),
+                'Imagen de Internet',
+                imagenWidth,
+                imagenHeight,
+              ),
+              SizedBox(height: separacionVertical),
+              _image(
+                const AssetImage('assets/images/perro.webp'),
+                'Imagen repetida',
+                imagenWidth,
+                imagenHeight,
+              ),
+              SizedBox(height: separacionVertical),
+            ],
+          ),
         ),
       ),
     );
   }
-
-  Widget _imageTile({required ImageProvider image, required String label}) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 4),
-        child: Column(
-          children: [
-            Image(
-              image: image,
-              height: 150,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-            const SizedBox(height: 8),
-            Text(label, textAlign: TextAlign.center),
-          ],
-        ),
-      ),
+// widget para mostrar la imagen y el texto ajustados a la pantalla.
+  Widget _image(
+    ImageProvider image,
+    String label,
+    double width,
+    double height,
+  ) {
+    return Column(
+      children: [
+        Image(image: image, width: width, height: height, fit: BoxFit.contain),
+        const SizedBox(height: 8),
+        Text(label),
+      ],
     );
   }
 }

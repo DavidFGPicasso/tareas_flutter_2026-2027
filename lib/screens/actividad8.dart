@@ -19,7 +19,7 @@ class Actividad8 extends StatelessWidget {
     return Scaffold(
       drawer: const CustomDrawer(),
       appBar: AppBar(
-        title: const Text('Imágenes Responsive'),
+        title: const Text('Actividad 8'),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Theme.of(context).colorScheme.onPrimary,
       ),
