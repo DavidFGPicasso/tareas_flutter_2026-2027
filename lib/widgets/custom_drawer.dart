@@ -25,15 +25,17 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
-            _drawerItem(context, 'Actividad 1', '/actividad1', Icons.filter_1),
-            _drawerItem(context, 'Actividad 2', '/actividad2', Icons.filter_2),
-            _drawerItem(context, 'Actividad 3', '/actividad3', Icons.filter_3),
-            _drawerItem(context, 'Actividad 4', '/actividad4', Icons.filter_4),
-            _drawerItem(context, 'Actividad 5', '/actividad5', Icons.filter_5),
-            _drawerItem(context, 'Actividad 6', '/actividad6', Icons.filter_6),
-            _drawerItem(context, 'Actividad 7', '/actividad7', Icons.filter_7),
-            _drawerItem(context, 'Actividad 8', '/actividad8', Icons.filter_8),
-            _drawerItem(context, 'Actividad 9', '/actividad9', Icons.filter_9),
+            _drawerItem(context, '1. Actividad 1', '/actividad1'),
+            _drawerItem(context, '2. Actividad 2', '/actividad2'),
+            _drawerItem(context, '3. Actividad 3', '/actividad3'),
+            _drawerItem(context, '4. Actividad 4', '/actividad4'),
+            _drawerItem(context, '5. Actividad 5', '/actividad5'),
+            _drawerItem(context, '6. Actividad 6', '/actividad6'),
+            _drawerItem(context, '7. Actividad 7', '/actividad7'),
+            _drawerItem(context, '8. Actividad 8', '/actividad8'),
+            _drawerItem(context, '9. Actividad 9', '/actividad9'),
+            _drawerItem(context, '10. Actividad 10', '/actividad10'),
+            _drawerItem(context, '11. Actividad 11', '/actividad11'),
           ],
         ),
       ),
@@ -44,11 +46,9 @@ class CustomDrawer extends StatelessWidget {
     BuildContext context,
     String title,
     String route,
-    IconData icon,
   ) {
     // Listtile para cada item.
     return ListTile(
-      leading: Icon(icon),
       title: Text(title),
       onTap: () {
         Navigator.pop(context);

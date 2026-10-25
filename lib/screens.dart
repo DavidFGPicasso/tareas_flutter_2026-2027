@@ -8,3 +8,5 @@ export 'screens/actividad6.dart';
 export 'screens/actividad7.dart';
 export 'screens/actividad8.dart';
 export 'screens/actividad9.dart';
+export 'screens/actividad10.dart';
+export 'screens/actividad11.dart';
